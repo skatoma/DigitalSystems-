@@ -1,4 +1,4 @@
-module demux_tb (output logic [7:0] Y, input logic D, input logic [2:0] SEL);
+module demux_tb ( logic [7:0] Y,  logic D, logic [2:0] SEL);
 demux u1( Y, D,SEL);
 
   //Unpacked array of expected (correct) outputs. Automatic means this has local scope
@@ -7,37 +7,32 @@ demux u1( Y, D,SEL);
  logic test;
  initial
  begin
-
-  D=0;
-
+ D=0;
  //Add a lay so that the outputs update
- #10ps;
+    #10ps;
      //Check output is the expected value
-          assert(Y==8'd0)
-             $display("Passed test");
-           else
-            $display("Failed test");
-           end;
-  
-  D=1;
+    assert(Y==0)
+          $display("Passed test");
+    else
+          $display("Failed test");
+    end
+   D=1;
   //Add a delay so that the outputs update
    #10ps;
-
  //Add a delay so that the outputs update
-  
-      for (n=0; n<8; n = n + 1)
+      for (int n=0; n<8; n = n + 1)
 	begin
            SEL=n;
            test=expected;
-           test= (test<<n)
+           test= (test<<n);
             //Add a delay so that the outputs update
-           #10ps;
+           //#10ps;
            assert(Y==test)
              $display("Passed test");
            else
             $display("Failed test");
-           end;
+           end
 	end
-  
-end
+ 
+  end
 endmodule

@@ -16,7 +16,7 @@ demux u1( Y, D,SEL);
  begin
  
  D=0;
- test= (expected>>1);
+ test= 0;
  //Add a lay so that the outputs update
     #10ps;
      //Check output is the expected value

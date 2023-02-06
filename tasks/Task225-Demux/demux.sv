@@ -11,8 +11,5 @@ always_comb
 		4'b1101 : Y = 8'b00100000;
 		4'b1110 : Y = 8'b01000000;
 		4'b1111 : Y = 8'b10000000;
-
 	endcase
-
 endmodule
-

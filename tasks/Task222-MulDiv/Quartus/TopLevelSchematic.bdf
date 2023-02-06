@@ -159,7 +159,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 32 624 200 640)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A[7..0]" (rect 5 0 39 12)(font "Arial" ))
+	(text "A[7..0]" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -344,6 +344,22 @@ https://fpgasoftware.intel.com/eula.
 	(rect 592 104 768 120)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "P3" (rect 90 0 102 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 584 128 760 144)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "P4" (rect 90 0 102 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -770,6 +786,11 @@ https://fpgasoftware.intel.com/eula.
 	(text "prod3[15]" (rect 498 96 544 113)(font "Intel Clear" ))
 	(pt 592 112)
 	(pt 488 112)
+)
+(connector
+	(text "prod4[31]" (rect 506 120 552 137)(font "Intel Clear" ))
+	(pt 584 136)
+	(pt 496 136)
 )
 (junction (pt 336 312))
 (junction (pt 368 328))

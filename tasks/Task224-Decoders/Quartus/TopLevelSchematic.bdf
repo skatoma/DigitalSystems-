@@ -375,28 +375,6 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 656 -32 831 6))
 )
 (symbol
-	(rect 392 424 560 504)
-	(text "decoder_8" (rect 5 0 55 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "SEL[2..0]" (rect 0 0 46 12)(font "Arial" ))
-		(text "SEL[2..0]" (rect 21 27 67 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 168 32)
-		(output)
-		(text "Y[7..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "Y[7..0]" (rect 119 27 153 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 152 64))
-	)
-)
-(symbol
 	(rect 384 520 568 600)
 	(text "decoder_N" (rect 5 0 58 12)(font "Arial" ))
 	(text "inst5" (rect 8 64 30 81)(font "Intel Clear" ))
@@ -433,6 +411,28 @@ https://fpgasoftware.intel.com/eula.
 	(rect 392 672 560 752)
 	(text "decoder_dc" (rect 5 0 61 12)(font "Arial" ))
 	(text "inst6" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "SEL[2..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "SEL[2..0]" (rect 21 27 67 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "Y[7..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "Y[7..0]" (rect 119 27 153 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 64))
+	)
+)
+(symbol
+	(rect 376 344 544 424)
+	(text "decoder_dc" (rect 5 0 61 12)(font "Arial" ))
+	(text "inst7" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -607,6 +607,36 @@ https://fpgasoftware.intel.com/eula.
 	(text "led[7..0]" (rect 570 440 608 457)(font "Intel Clear" ))
 	(pt 560 456)
 	(pt 616 456)
+	(bus)
+)
+(connector
+	(pt 392 456)
+	(pt 392 440)
+	(bus)
+)
+(connector
+	(pt 392 440)
+	(pt 360 440)
+	(bus)
+)
+(connector
+	(pt 360 440)
+	(pt 360 376)
+	(bus)
+)
+(connector
+	(pt 360 376)
+	(pt 376 376)
+	(bus)
+)
+(connector
+	(pt 560 376)
+	(pt 560 456)
+	(bus)
+)
+(connector
+	(pt 560 376)
+	(pt 544 376)
 	(bus)
 )
 (junction (pt 520 40))

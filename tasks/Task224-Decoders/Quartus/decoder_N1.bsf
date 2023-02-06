@@ -21,31 +21,23 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 200 96)
-	(text "mult" (rect 5 0 21 12)(font "Arial" ))
+	(rect 16 16 152 96)
+	(text "decoder_N1" (rect 5 0 53 12)(font "Arial" ))
 	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
-		(pt 0 32)
-		(input)
-		(text "dataa[7..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "dataa[7..0]" (rect 21 27 62 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "datab[7..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "datab[7..0]" (rect 21 43 62 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 184 32)
+		(pt 136 32)
 		(output)
-		(text "result[15..0]" (rect 0 0 44 12)(font "Arial" ))
-		(text "result[15..0]" (rect 119 27 163 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32)(line_width 3))
+		(text "Y[N-1..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "Y[N-1..0]" (rect 80 27 115 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32)(line_width 3))
 	)
+	(parameter
+		"N"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 168 64)(line_width 1))
+		(rectangle (rect 16 16 120 64)(line_width 1))
 	)
+	(annotation_block (parameter)(rect 152 -64 252 16))
 )

@@ -11,7 +11,7 @@ begin
  S=1;
  R=0;
  #10ps;
- assert({Q,Qbar}==2'b10)
+ assert({Q,Qbar}===2'b10)
     $display("Pass test1");
  else
      $display("Fail test1");
@@ -19,7 +19,7 @@ begin
  S=0;
  R=1;
  #10ps;
- assert({Q,Qbar}==2'b01)
+ assert({Q,Qbar}===2'b01)
     $display("Pass test2");
  else
      $display("Fail test2");
@@ -27,7 +27,7 @@ begin
  S=1;
  R=1;
  #10ps;
- assert({Q,Qbar}==2'bzz)
+ assert({Q,Qbar}===2'bzz)
     $display("Pass test3");
  else
      $display("Fail test3");

@@ -5,6 +5,7 @@ logic D, Q;
 
 //Instantiate a DFF
 d_ff u1(Q,D,CLK);
+d_ff1 u2( Q,  D, CLK, n_Reset);
 
 //Generate 5 clock cycles
 initial begin
@@ -29,5 +30,23 @@ initial begin
 	D = 0;		//Set D = 0
 	@(posedge CLK);	//Wait for negative edge of clock
 	#1 assert(Q == D) $display("PASS"); else $error("FAIL");	//Check Q
+end
+
+initial begin
+//Initialise
+	D = 0;
+
+	//Test for when D = 1
+	@(negedge CLK);	//Wait for negative edge of clock
+	D = 1;		//Set D = 1
+	@(posedge CLK);	//Wait for positive edge of clock
+	#1 assert(Q == D) $display("PASS"); else $error("FAIL");	//Check Q
+
+	//Test for when D = 0
+	@(negedge CLK);	//Wait for negative edge of clock
+	D = 0;		//Set D = 0
+	@(posedge CLK);	//Wait for negative edge of clock
+	#1 assert(Q == D) $display("PASS"); else $error("FAIL");	//Check Q
+
 end
 endmodule

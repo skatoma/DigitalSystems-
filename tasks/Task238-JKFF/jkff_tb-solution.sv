@@ -1,4 +1,4 @@
-module jkff_tb;
+module jkff_tbs;
 
 logic J,K,CLK,Q;
 

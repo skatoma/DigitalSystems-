@@ -26,10 +26,41 @@ always_comb begin : next_state_logic
 	//Default is to stay in the current state
 	next_state = state;
 	
+	
 	//Conditionally update state
 	
 	//WRITE NEXT STATE LOGIC HERE HERE
-	
+	case(state)
+	S0: if( UP_PULSE=='1)
+	      next_state=state.next();
+	S1: if( UP_PULSE=='1)
+	      next_state=state.next();	
+		 else if(DOWN_PULSE==1)
+		    next_state=state.prev();
+	S2: if( UP_PULSE=='1)
+	      next_state=state.next();	
+		 else if(DOWN_PULSE==1)
+		    next_state=state.prev();
+	S3: if( UP_PULSE=='1)
+	      next_state=state.next();	
+		 else if(DOWN_PULSE==1)
+		    next_state=state.prev();
+	S4: if( UP_PULSE=='1)
+	      next_state=state.next();	
+		 else if(DOWN_PULSE==1)
+		    next_state=state.prev();
+	S5: if( UP_PULSE=='1)
+	      next_state=state.next();	
+		 else if(DOWN_PULSE==1)
+		    next_state=state.prev();
+	S6: if( UP_PULSE=='1)
+	      next_state=state.next();	
+		 else if(DOWN_PULSE==1)
+		    next_state=state.prev();
+	S7: if(DOWN_PULSE==1)
+	      next_state=state.prev();	
+	endcase	
+			 
 	// hint - state.next() and state.prev() are useful
 	
 	// See https://www.chipverify.com/systemverilog/systemverilog-enumeration

@@ -14,6 +14,11 @@ end
 initial begin
 
    //Generate clock here   
+   clk = 0;
+	repeat(20) begin
+		#50ps;
+		clk = ~clk;
+	end
 
 end
 
@@ -22,6 +27,25 @@ initial begin
    @(negedge clk);
    
    //Write tests here
+  //x=0
+  @(posedge clk);
+  #1assert(Q_mealy==Q_moore) $display("Pass"); else $error("Fail");
+  @(negedge clk);
+
+   //x=1
+   x = '1;
+  @(posedge clk);
+  #1assert(Q_mealy==Q_moore)$display("Pass"); else $error("Fail");
+  @(posedge clk);
+  #1assert((Q_mealy==Q_moore)&&(Q_mealy==0)) $display("Pass"); else $error("Fail");
+
+  @(negedge clk);
+   //reset=0
+  reset = '0;
+  @(posedge clk);
+  #1assert((Q_mealy==Q_moore)&&(Q_mealy==0)) $display("Pass"); else $error("Fail");
+    @(posedge clk);
+  #1assert((Q_mealy==Q_moore)&&(Q_mealy==0)) $display("Pass"); else $error("Fail");
 
 end
 

@@ -48,7 +48,11 @@ always_comb begin : output_logic
    case(state)
    IDLE:    ;RESET=1;
    ST:      ;START=1;
-   HD:      ;
+   HD:      ;begin
+	          RESET=0;
+				 START=0;
+				 Y=0; 
+				 end	
    DT:      ;Y=1;   
    default: ;Y=0;
    endcase

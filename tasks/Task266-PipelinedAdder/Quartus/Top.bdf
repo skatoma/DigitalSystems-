@@ -363,3 +363,33 @@ https://fpgasoftware.intel.com/eula.
 	(pt 640 288)
 	(bus)
 )
+(connector
+	(text "Y[7..0]" (rect 898 328 928 345)(font "Intel Clear" ))
+	(pt 984 344)
+	(pt 888 344)
+	(bus)
+)
+(connector
+	(pt 984 328)
+	(pt 920 328)
+)
+(connector
+	(pt 920 328)
+	(pt 920 320)
+)
+(connector
+	(pt 984 312)
+	(pt 952 312)
+)
+(connector
+	(pt 984 296)
+	(pt 944 296)
+)
+(connector
+	(pt 944 296)
+	(pt 944 288)
+)
+(connector
+	(pt 984 360)
+	(pt 896 360)
+)
